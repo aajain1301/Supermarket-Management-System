@@ -1,6 +1,7 @@
 {% load widget_tweaks %}
 {% load static %}
 {% block content%}
+
     <script type="text/javascript">
         function compute(val) {
             total_amount = $('#totalAmount').val();
@@ -35,16 +36,16 @@
                     <input type="text" class="form-control form-control-lg" name="amount_received" id="amountReceived" placeholder="Enter amount" oninput="compute(this.value)">
                 </div>
             </div>
-            <div class="form-row"></div>
+            <div class="form-row">
                 <div class="form-group">
                     <label for="balance">Balance</label>
                     <input type="text" readonly class="form-control pl-3 form-control-lg form-control-plaintext" name="balance" id="balance" value="{{ balance }}">
-                </div>
+                </div></div>
             </div>
         </div>
 
         <div class="modal-footer form-group justify-content-between">
-            <button type="submit" class="btn-primary py-1">PAY NOW</button>
+            
             <a class="nav-link border border-primary px-4 py-1 text-primary"
                 href="{% url 'sales_receipt' %}"
                 title="Sales Receipt"><i class="fas fa-receipt mr-1"></i>PRINT RECEIPT</a> 
